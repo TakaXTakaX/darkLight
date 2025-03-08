@@ -1,0 +1,161 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #000;
+  --secondary-text: #555;
+  --primary-color: #ffffff;
+  --accent-color: #0071ff;
+  --button-bg: black;
+  --button-text: white;
+  --input-bg: #d3d3d3;
+  --input-text: #000;
+}
+
+.darkmode {
+  --base-color: #000;
+  --base-variant: #222;
+  --text-color: #fff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #181818;
+  --accent-color: #0071ff;
+  --button-bg: #fff;
+  --button-text: #000;
+  --input-bg: #444;
+  --input-text: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#theme-switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 900px;
+  background: var(--primary-color);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo-section {
+  text-align: center;
+  flex: 1;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form-section {
+  width: 50%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  background: var(--input-bg);
+  color: var(--input-text);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input::placeholder {
+  color: var(--secondary-text);
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 14px 25px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 12px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: gray;
+}
+
+.login-link {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-top: 10px;
+}
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
